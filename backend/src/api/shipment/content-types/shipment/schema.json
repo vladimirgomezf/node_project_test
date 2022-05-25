@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipments",
+  "info": {
+    "singularName": "shipment",
+    "pluralName": "shipments",
+    "displayName": "Shipments",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shipment_id": {
+      "type": "uid",
+      "required": true
+    },
+    "order_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "shipments"
+    },
+    "shipment_date": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}

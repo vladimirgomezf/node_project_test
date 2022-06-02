@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-parsing-error -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <v-app dark>
@@ -31,10 +32,10 @@
 
         <template #extension>
           <v-tabs align-with-title>
-            <v-tab>Home</v-tab>
-            <v-tab>Customers</v-tab>
-            <v-tab>Orders</v-tab>
-            <v-tab>Shipments</v-tab>
+            <v-tab to="/">Home</v-tab>
+            <v-tab to="/customers">Customers</v-tab>
+            <v-tab to="/orders">Orders</v-tab>
+            <v-tab to="/shipments">Shipments</v-tab>
           </v-tabs>
         </template>
       </v-app-bar>

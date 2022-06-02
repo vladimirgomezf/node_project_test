@@ -21,16 +21,16 @@ export default {
     return {
       items: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: 'carrusel/01.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: 'carrusel/02.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: 'carrusel/03.jpg',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: 'carrusel/04.jpg',
         },
       ],
     }

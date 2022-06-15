@@ -38,7 +38,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/strapi',
   ],
+
+  strapi: {
+    entities: ['customers', 'orders', 'shipments'],
+    url: 'http://localhost:1337',
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

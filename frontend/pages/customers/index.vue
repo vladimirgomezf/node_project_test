@@ -192,12 +192,28 @@ export default {
       })
     },
 
-    save() {
-      if (this.editedIndex > -1) {
-        Object.assign(this.customers[this.editedIndex], this.editedItem)
-      } else {
-        this.customers.push(this.editedItem)
+    async save() {
+      try {
+        await this.$strapi.create('customers', {
+          data: this.editedItem,
+        })
+      } catch (error) {
+        console.log(error)
       }
+      // this.customers.push(this.editedItem)
+      // await axios
+      //   .post('http://localhost:1337/api/customers/', {
+      //     data: {
+      //       customer_id: this.editItem.customer_id,
+      //       customer_name: this.editItem.customer_name,
+      //     },
+      //   })
+      //   .then(function (response) {
+      //     console.log(response)
+      //   })
+      //   .catch(function (error) {
+      //     console.error(error)
+      //   })
       this.close()
     },
   },
